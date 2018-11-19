@@ -1,0 +1,219 @@
+
+{% from "warning-text/macro.njk" import govukWarningText %}
+{{ govukWarningText({
+  text: "This is work in progress — No macro",
+  iconFallbackText: "Warning"
+}) }}
+
+<h2 class="govuk-heading-m">DL - govuk-data-list with actions and borders</h2>
+
+
+<dl class="govuk-data-list">
+
+ <div class="govuk-data-list__row">
+  <dt class="govuk-data-list__item govuk-data-list__item--definition">Name</dt>
+  <dd class="govuk-data-list__item">
+    <span>
+      Firstname Lastname
+    </span>
+  </dd>
+  <dd class="govuk-data-list__action">
+    <ul class="govuk-data-list__action-list">
+      <li class="govuk-data-list__action-list-item"><a class="govuk-link" href="#">Edit</a></li>
+      <li class="govuk-data-list__action-list-item"><a class="govuk-link" href="#">Delete</a></li>
+    </ul>
+  </dd>
+ </div>
+
+
+  <div class="govuk-data-list__row">
+  <dt class="govuk-data-list__item govuk-data-list__item--definition">Date of birth</dt>
+  <dd class="govuk-data-list__item">
+    <span>
+      13/08/1980
+    </span>
+  </dd>
+  <dd class="govuk-data-list__action">
+    <ul class="govuk-data-list__action-list">
+      <li class="govuk-data-list__action-list-item"><a class="govuk-link" href="#">Change</a></li>
+    </ul>
+  </dd>
+ </div>
+
+
+ <div class="govuk-data-list__row">
+  <dt class="govuk-data-list__item govuk-data-list__item--definition">Contact information</dt>
+  <dd class="govuk-data-list__item">
+    <span>
+      email@email.com
+    </span>
+    <span>
+      Address line 1<br>
+      Address line 2<br>
+      Address line 3<br>
+      Address line 4<br>
+      Address line 5
+    </span>
+  </dd>
+  <dd class="govuk-data-list__action">
+    <ul class="govuk-data-list__action-list">
+      <li class="govuk-data-list__action-list-item"><a class="govuk-link" href="#">Edit</a></li>
+      <li class="govuk-data-list__action-list-item"><a class="govuk-link" href="#">Delete</a></li>
+    </ul>
+  </dd>
+ </div>
+
+</dl>
+
+
+
+<h2 class="govuk-heading-m">DL - govuk-data list with actions and borders – Action breaks onto new line on small screens</h2>
+
+
+<dl class="govuk-data-list govuk-data-list--break-action">
+
+ <div class="govuk-data-list__row">
+  <dt class="govuk-data-list__item govuk-data-list__item--definition">Name</dt>
+  <dd class="govuk-data-list__item">
+    <span>
+      Firstname Lastname
+    </span>
+  </dd>
+  <dd class="govuk-data-list__action">
+    <ul class="govuk-data-list__action-list">
+      <li class="govuk-data-list__action-list-item"><a class="govuk-link" href="#">Edit</a></li>
+      <li class="govuk-data-list__action-list-item"><a class="govuk-link" href="#">Delete</a></li>
+    </ul>
+  </dd>
+ </div>
+
+
+  <div class="govuk-data-list__row">
+  <dt class="govuk-data-list__item govuk-data-list__item--definition">Date of birth</dt>
+  <dd class="govuk-data-list__item">
+    <span>
+      13/08/1980
+    </span>
+  </dd>
+  <dd class="govuk-data-list__action">
+    <ul class="govuk-data-list__action-list">
+      <li class="govuk-data-list__action-list-item"><a class="govuk-link" href="#">Change</a></li>
+    </ul>
+  </dd>
+ </div>
+
+
+ <div class="govuk-data-list__row">
+  <dt class="govuk-data-list__item govuk-data-list__item--definition">Contact information</dt>
+  <dd class="govuk-data-list__item">
+    <span>
+      email@email.com
+    </span>
+    <span>
+      Address line 1<br>
+      Address line 2<br>
+      Address line 3<br>
+      Address line 4<br>
+      Address line 5
+    </span>
+  </dd>
+  <dd class="govuk-data-list__action">
+    <ul class="govuk-data-list__action-list">
+      <li class="govuk-data-list__action-list-item"><a class="govuk-link" href="#">Edit</a></li>
+      <li class="govuk-data-list__action-list-item"><a class="govuk-link" href="#">Delete</a></li>
+    </ul>
+  </dd>
+ </div>
+
+</dl>
+
+
+
+
+<h2 class="govuk-heading-m">DL - govuk-data-list without actions or borders</h2>
+
+
+<dl class="govuk-data-list govuk-data-list--no-border">
+
+ <div class="govuk-data-list__row">
+  <dt class="govuk-data-list__item govuk-data-list__item--definition">Name</dt>
+  <dd class="govuk-data-list__item">
+    <span>
+      Firstname Lastname
+    </span>
+  </dd>
+ </div>
+
+
+  <div class="govuk-data-list__row">
+  <dt class="govuk-data-list__item govuk-data-list__item--definition">Date of birth</dt>
+  <dd class="govuk-data-list__item">
+    <span>
+      13/08/1980
+    </span>
+  </dd>
+ </div>
+
+
+ <div class="govuk-data-list__row">
+  <dt class="govuk-data-list__item govuk-data-list__item--definition">Contact information</dt>
+  <dd class="govuk-data-list__item">
+    <span>
+      email@email.com
+    </span>
+    <span>
+      Address line 1<br>
+      Address line 2<br>
+      Address line 3<br>
+      Address line 4<br>
+      Address line 5
+    </span>
+  </dd>
+ </div>
+
+</dl>
+
+
+
+<h2 class="govuk-heading-m">DL - govuk-data-list with right aligned key (from tablet) </h2>
+
+
+<dl class="govuk-data-list govuk-data-list--no-border">
+
+ <div class="govuk-data-list__row">
+  <dt class="govuk-data-list__item govuk-data-list__item--definition govuk-data-list__item-align-right">Name</dt>
+  <dd class="govuk-data-list__item">
+    <span>
+      Firstname Lastname
+    </span>
+  </dd>
+ </div>
+
+
+  <div class="govuk-data-list__row">
+  <dt class="govuk-data-list__item govuk-data-list__item--definition govuk-data-list__item-align-right">Date of birth</dt>
+  <dd class="govuk-data-list__item">
+    <span>
+      13/08/1980
+    </span>
+  </dd>
+ </div>
+
+
+ <div class="govuk-data-list__row">
+  <dt class="govuk-data-list__item govuk-data-list__item--definition govuk-data-list__item-align-right">Contact information</dt>
+  <dd class="govuk-data-list__item">
+    <span>
+      email@email.com
+    </span>
+    <span>
+      Address line 1<br>
+      Address line 2<br>
+      Address line 3<br>
+      Address line 4<br>
+      Address line 5
+    </span>
+  </dd>
+ </div>
+
+</dl>

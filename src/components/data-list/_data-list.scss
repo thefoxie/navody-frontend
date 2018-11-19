@@ -1,0 +1,210 @@
+@import "../../settings/all";
+@import "../../tools/all";
+@import "../../helpers/all";
+
+@include govuk-exports("govuk/component/data-list") {
+
+  dl,
+  dt,
+  dd {
+    margin: 0;
+  }
+
+  .govuk-data-list {
+    @include govuk-font($size: 19);
+    @include govuk-text-colour;
+    box-sizing: border-box;
+    display: table;
+    width: 100%;
+    @include govuk-responsive-margin(9, "bottom");
+
+    &:before,
+    &:after {
+      box-sizing: inherit;
+    }
+  }
+
+  .govuk-data-list__row {
+    box-sizing: border-box;
+    display: table-row;
+    width: 100%;
+    border-bottom: 1px solid $govuk-border-colour;
+
+    &:before,
+    &:after {
+      box-sizing: inherit;
+    }
+  }
+
+  .govuk-data-list__item {
+    box-sizing: border-box;
+    display: block;
+    padding: 0;
+    padding-right: govuk-spacing(3);
+    border-bottom: 1px solid $govuk-border-colour;
+
+    &:before,
+    &:after {
+      box-sizing: inherit;
+    }
+
+    @include govuk-media-query($from: tablet) {
+      display: table-cell;
+    }
+  }
+
+  .govuk-data-list__item span {
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: govuk-spacing(2);
+
+    &:before,
+    &:after {
+      box-sizing: inherit;
+    }
+  }
+
+  .govuk-data-list__item--definition {
+    @include govuk-typography-weight-bold;
+    box-sizing: border-box;
+    width: 50%;
+    padding-right: govuk-spacing(3);
+    padding-bottom: govuk-spacing(1);
+    border-bottom: 0;
+
+    &:before,
+    &:after {
+      box-sizing: inherit;
+    }
+
+    @include govuk-media-query($from: tablet) {
+      width: 25%;
+      padding-bottom: govuk-spacing(2);
+      border-bottom: 1px solid $govuk-border-colour;
+    }
+  }
+
+  .govuk-data-list__item-align-right {
+
+    @include govuk-media-query($from: tablet) {
+      text-align: right;
+    }
+  }
+
+  .govuk-data-list__action {
+    box-sizing: border-box;
+    display: table-cell;
+    width: 50%;
+    padding: govuk-spacing(2) 0;
+    border-bottom: 1px solid $govuk-border-colour;
+
+    @include govuk-media-query($from: tablet) {
+      width: 25%;
+      padding-bottom: govuk-spacing(2);
+      border-bottom: 1px solid $govuk-border-colour;
+    }
+
+    &:before,
+    &:after {
+      box-sizing: inherit;
+    }
+  }
+
+  .govuk-data-list__action-list {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+
+    &:before,
+    &:after {
+      box-sizing: inherit;
+    }
+  }
+
+  .govuk-data-list__action-list-item {
+    box-sizing: border-box;
+    display: inline;
+    padding-right: govuk-spacing(2);
+    border-right: 1px solid $govuk-border-colour;
+
+    &:before,
+    &:after {
+      box-sizing: inherit;
+    }
+  }
+
+  .govuk-data-list__action-list-item:nth-last-of-type(1) {
+    box-sizing: border-box;
+    padding-right: 0;
+    padding-left: 0;
+    border-right: 0;
+
+    &:before,
+    &:after {
+      box-sizing: inherit;
+    }
+
+    @include govuk-media-query($from: tablet) {
+      padding-left: govuk-spacing(1);
+    }
+  }
+
+  // No borders
+
+  .govuk-data-list--no-border .govuk-data-list__item {
+    @include govuk-responsive-margin(6, "right");
+    border-bottom: 0;
+
+    @include govuk-media-query($until: tablet) {
+      display: block;
+      margin-bottom: govuk-spacing(3);
+      padding: 0;
+    }
+  }
+
+  .govuk-data-list--no-border .govuk-data-list__item--definition {
+
+    @include govuk-media-query($until: tablet) {
+      margin-bottom: govuk-spacing(1);
+    }
+  }
+
+  // Break actions onto new inline
+
+  .govuk-data-list--break-action .govuk-data-list__action {
+    @include govuk-media-query($until: tablet) {
+      display: block;
+      width: 100%;
+      margin-bottom: govuk-spacing(3);
+    }
+  }
+
+  .govuk-data-list--break-action .govuk-data-list__action-list {
+    @include govuk-media-query($until: tablet) {
+      text-align: left;
+    }
+  }
+
+  .govuk-data-list--break-action .govuk-data-list__item {
+    @include govuk-media-query($until: tablet) {
+      border-bottom: 0;
+    }
+  }
+
+  .govuk-data-list--break-action .govuk-data-list__item span {
+    @include govuk-media-query($until: tablet) {
+      margin-bottom: 0;
+    }
+  }
+  // Begin adjustments for font baseline offset
+  // These should be removed when the font is updated with the correct baseline
+
+  .govuk-back-link:before {
+    $offset: 1px;
+
+    top: $offset * -1;
+    bottom: $offset;
+  }
+}
