@@ -190,13 +190,4 @@
       margin-bottom: 0;
     }
   }
-  // Begin adjustments for font baseline offset
-  // These should be removed when the font is updated with the correct baseline
-
-  .govuk-back-link:before {
-    $offset: 1px;
-
-    top: $offset * -1;
-    bottom: $offset;
-  }
 }
