@@ -11,8 +11,8 @@
           {{ row.html | safe }}
         {% endif %}
       </dd>
-      <dd class="govuk-data-list__action">
-        {% if row.actions %}
+      {% if row.actions %}
+        <dd class="govuk-data-list__action">
           <ul class="govuk-data-list__action-list">
             {% for action in row.actions %}
               <li class="govuk-data-list__action-list-item">
@@ -22,8 +22,8 @@
               </li>
             {% endfor %}
           </ul>
-        {% endif %}
-      </dd>
+        </dd>
+      {% endif %}
     </div>
   {% endfor %}
 </dl>
