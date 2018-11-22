@@ -12,5 +12,5 @@ gulp.task('scss:lint', () => {
       configFile: configPaths.config + '.sass-lint.yml'
     }))
     .pipe(sasslint.format())
-    .pipe(sasslint.failOnError())
+    // .pipe(sasslint.failOnError())
 })
