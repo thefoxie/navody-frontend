@@ -5,11 +5,7 @@
         {{ row.key }}
       </dt>
       <dd class="govuk-data-list__item {%- if params.valueClasses %} {{ params.valueClasses }}{% endif %}">
-        {% if row.text %}
-          <p class="govuk-body">{{ row.text }}</p>
-        {% else %}
-          {{ row.html | safe }}
-        {% endif %}
+        {{ row.html | safe if row.html else row.text }}
       </dd>
       {% if row.actions %}
         <dd class="govuk-data-list__action {%- if params.actionsClasses %} {{ params.actionsClasses }}{% endif %}">
