@@ -6,7 +6,7 @@
       </dt>
       <dd class="govuk-data-list__item {%- if params.valueClasses %} {{ params.valueClasses }}{% endif %}">
         {% if row.text %}
-          <span>{{ row.text }}</span>
+          <p class="govuk-body">{{ row.text }}</p>
         {% else %}
           {{ row.html | safe }}
         {% endif %}

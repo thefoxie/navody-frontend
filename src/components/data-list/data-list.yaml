@@ -16,16 +16,16 @@ examples:
             text: Change
        - key: Contact information
          html: |
-          <span>
+          <p class="govuk-body">
             email@email.com
-          </span>
-          <span>
+          </p>
+          <p class="govuk-body">
             Address line 1<br>
             Address line 2<br>
             Address line 3<br>
             Address line 4<br>
             Address line 5
-          </span>
+          </p>
          actions:
           - href: '#'
             text: Edit
@@ -49,16 +49,16 @@ examples:
           text: Change
       - key: Contact information
         html: |
-          <span>
+          <p class="govuk-body">
             email@email.com
-          </span>
-          <span>
+          </p>
+          <p class="govuk-body">
             Address line 1<br>
             Address line 2<br>
             Address line 3<br>
             Address line 4<br>
             Address line 5
-          </span>
+          </p>
         actions:
           - href: '#'
             text: Edit
@@ -74,16 +74,16 @@ examples:
         text: 13/08/1980
       - key: Contact information
         html: |
-          <span>
+          <p class="govuk-body">
             email@email.com
-          </span>
-          <span>
+          </p>
+          <p class="govuk-body">
             Address line 1<br>
             Address line 2<br>
             Address line 3<br>
             Address line 4<br>
             Address line 5
-          </span>
+          </p>
  - name: overridden-widths
    data:
     keyClasses: govuk-!-width-one-half
@@ -104,16 +104,16 @@ examples:
           text: Change
       - key: Contact information
         html: |
-          <span>
+          <p class="govuk-body">
             email@email.com
-          </span>
-          <span>
+          </p>
+          <p class="govuk-body">
             Address line 1<br>
             Address line 2<br>
             Address line 3<br>
             Address line 4<br>
             Address line 5
-          </span>
+          </p>
         actions:
           - href: '#'
             text: Edit

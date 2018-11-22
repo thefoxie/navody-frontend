@@ -39,8 +39,8 @@
   .govuk-data-list__item {
     box-sizing: border-box;
     display: block;
-    padding: 0;
-    padding-right: govuk-spacing(3);
+    padding: govuk-spacing(3);
+    padding-left: 0;
     border-bottom: 1px solid $govuk-border-colour;
 
     &:before,
@@ -53,15 +53,12 @@
     }
   }
 
-  .govuk-data-list__item span {
-    box-sizing: border-box;
-    display: block;
+  .govuk-data-list__item > p {
     margin-bottom: govuk-spacing(2);
+  }
 
-    &:before,
-    &:after {
-      box-sizing: inherit;
-    }
+  .govuk-data-list__item > :last-child {
+    margin-bottom: 0;
   }
 
   .govuk-data-list__item--definition {
@@ -193,7 +190,7 @@
     }
   }
 
-  .govuk-data-list--break-action .govuk-data-list__item span {
+  .govuk-data-list--break-action .govuk-data-list__item > :last-child {
     @include govuk-media-query($until: tablet) {
       margin-bottom: 0;
     }
