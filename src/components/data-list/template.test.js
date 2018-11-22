@@ -20,6 +20,14 @@ describe('Data list', () => {
     })
     expect(results).toHaveNoViolations()
   })
+  it('renders classes', async () => {
+    const $ = render('data-list', {
+      classes: 'app-custom-class'
+    })
+
+    const $component = $('.govuk-data-list')
+    expect($component.hasClass('app-custom-class')).toBeTruthy()
+  })
   describe('rows', () => {
     it('renders keys', async () => {
       const $ = render('data-list', {
