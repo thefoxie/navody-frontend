@@ -64,3 +64,23 @@ examples:
             text: Edit
           - href: '#'
             text: Change
+ - name: no-border
+   data:
+    classes: govuk-data-list--no-border
+    rows:
+      - key: Name
+        text: Firstname Lastname
+      - key: Date of birth
+        text: 13/08/1980
+      - key: Contact information
+        html: |
+          <span>
+            email@email.com
+          </span>
+          <span>
+            Address line 1<br>
+            Address line 2<br>
+            Address line 3<br>
+            Address line 4<br>
+            Address line 5
+          </span>
