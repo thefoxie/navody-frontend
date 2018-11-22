@@ -29,47 +29,79 @@ describe('Data list', () => {
     expect($component.hasClass('app-custom-class')).toBeTruthy()
   })
   describe('rows', () => {
-    it('renders keys', async () => {
-      const $ = render('data-list', {
-        rows: [
-          {
-            key: 'Name'
-          }
-        ]
+    describe('keys', () => {
+      it('renders keys', async () => {
+        const $ = render('data-list', {
+          rows: [
+            {
+              key: 'Name'
+            }
+          ]
+        })
+
+        const $component = $('.govuk-data-list')
+        const $definitionTerm = $component.find('dt.govuk-data-list__item')
+
+        expect($definitionTerm.html()).toContain('Name')
       })
+      it('renders classes', async () => {
+        const $ = render('data-list', {
+          keyClasses: 'app-custom-class',
+          rows: [
+            {
+              key: 'Name'
+            }
+          ]
+        })
 
-      const $component = $('.govuk-data-list')
-      const $definitionTerm = $component.find('dt.govuk-data-list__item')
-
-      expect($definitionTerm.html()).toContain('Name')
+        const $component = $('.govuk-data-list')
+        const $definitionTerm = $component.find('dt.govuk-data-list__item')
+        expect($definitionTerm.hasClass('app-custom-class')).toBeTruthy()
+      })
     })
-    it('renders text', async () => {
-      const $ = render('data-list', {
-        rows: [
-          {
-            text: 'Firstname Lastname'
-          }
-        ]
+    describe('values', () => {
+      it('renders text', async () => {
+        const $ = render('data-list', {
+          rows: [
+            {
+              text: 'Firstname Lastname'
+            }
+          ]
+        })
+
+        const $component = $('.govuk-data-list')
+        const $definitionTerm = $component.find('dd.govuk-data-list__item')
+
+        expect($definitionTerm.html()).toContain('Firstname Lastname')
       })
+      it('renders html', async () => {
+        const $ = render('data-list', {
+          rows: [
+            {
+              html: '<span>email@email.com</span>'
+            }
+          ]
+        })
 
-      const $component = $('.govuk-data-list')
-      const $definitionTerm = $component.find('dd.govuk-data-list__item')
+        const $component = $('.govuk-data-list')
+        const $definitionTerm = $component.find('dd.govuk-data-list__item')
 
-      expect($definitionTerm.html()).toContain('Firstname Lastname')
-    })
-    it('renders html', async () => {
-      const $ = render('data-list', {
-        rows: [
-          {
-            html: '<span>email@email.com</span>'
-          }
-        ]
+        expect($definitionTerm.html()).toContain('<span>email@email.com</span>')
       })
+      it('renders classes', async () => {
+        const $ = render('data-list', {
+          valueClasses: 'app-custom-class',
+          rows: [
+            {
+              text: 'Firstname Lastname'
+            }
+          ]
+        })
 
-      const $component = $('.govuk-data-list')
-      const $definitionTerm = $component.find('dd.govuk-data-list__item')
-
-      expect($definitionTerm.html()).toContain('<span>email@email.com</span>')
+        const $component = $('.govuk-data-list')
+        const $definitionTerm = $component.find('dd.govuk-data-list__item')
+        expect($definitionTerm.hasClass('app-custom-class')).toBeTruthy()
+      })
     })
     describe('actions', () => {
       it('renders href', async () => {
@@ -107,6 +139,25 @@ describe('Data list', () => {
         const $actionLink = $component.find('.govuk-data-list__action-list-item a')
 
         expect($actionLink.text()).toContain('Edit')
+      })
+      it('renders classes', async () => {
+        const $ = render('data-list', {
+          actionsClasses: 'app-custom-class',
+          rows: [
+            {
+              actions: [
+                {
+                  text: 'Edit'
+                }
+              ]
+            }
+          ]
+        })
+
+        const $component = $('.govuk-data-list')
+        const $actionList = $component.find('.govuk-data-list__action')
+
+        expect($actionList.hasClass('app-custom-class')).toBeTruthy()
       })
     })
   })

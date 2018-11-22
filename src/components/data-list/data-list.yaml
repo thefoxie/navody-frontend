@@ -84,3 +84,38 @@ examples:
             Address line 4<br>
             Address line 5
           </span>
+ - name: overridden-widths
+   data:
+    keyClasses: govuk-!-width-one-half
+    valueClasses: govuk-!-width-one-quarter
+    actionsClasses: govuk-!-width-one-half
+    rows:
+      - key: Name
+        text: Firstname Lastname
+        actions:
+          - href: '#'
+            text: Edit
+          - href: '#'
+            text: Delete
+      - key: Date of birth
+        text: 13/08/1980
+        actions:
+        - href: '#'
+          text: Change
+      - key: Contact information
+        html: |
+          <span>
+            email@email.com
+          </span>
+          <span>
+            Address line 1<br>
+            Address line 2<br>
+            Address line 3<br>
+            Address line 4<br>
+            Address line 5
+          </span>
+        actions:
+          - href: '#'
+            text: Edit
+          - href: '#'
+            text: Change

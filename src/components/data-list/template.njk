@@ -1,10 +1,10 @@
 <dl class="govuk-data-list {%- if params.classes %} {{ params.classes }}{% endif %}">
   {% for row in params.rows %}
     <div class="govuk-data-list__row">
-      <dt class="govuk-data-list__item govuk-data-list__item--definition">
+      <dt class="govuk-data-list__item govuk-data-list__item--definition {%- if params.keyClasses %} {{ params.keyClasses }}{% endif %}">
         {{ row.key }}
       </dt>
-      <dd class="govuk-data-list__item">
+      <dd class="govuk-data-list__item {%- if params.valueClasses %} {{ params.valueClasses }}{% endif %}">
         {% if row.text %}
           <span>{{ row.text }}</span>
         {% else %}
@@ -12,7 +12,7 @@
         {% endif %}
       </dd>
       {% if row.actions %}
-        <dd class="govuk-data-list__action">
+        <dd class="govuk-data-list__action {%- if params.actionsClasses %} {{ params.actionsClasses }}{% endif %}">
           <ul class="govuk-data-list__action-list">
             {% for action in row.actions %}
               <li class="govuk-data-list__action-list-item">
