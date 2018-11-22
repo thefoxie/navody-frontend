@@ -4,18 +4,13 @@
 
 @include govuk-exports("govuk/component/data-list") {
 
-  dl,
-  dt,
-  dd {
-    margin: 0;
-  }
-
   .govuk-data-list {
     @include govuk-font($size: 19);
     @include govuk-text-colour;
     box-sizing: border-box;
     display: table;
     width: 100%;
+    margin: 0;
     @include govuk-responsive-margin(9, "bottom");
 
     &:before,
