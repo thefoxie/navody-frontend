@@ -119,3 +119,36 @@ examples:
             text: Edit
           - href: '#'
             text: Change
+ - name: check-your-answers
+   data:
+    rows:
+      - key: Name
+        text: Sarah Philips
+        actions:
+          - href: '#'
+            text: Change
+      - key: Date of birth
+        text: 5 January 1978
+        actions:
+        - href: '#'
+          text: Change
+      - key: Contact information
+        html: |
+          72 Guild Street<br>
+          London<br>
+          SE23 6FH
+        actions:
+          - href: '#'
+            text: Change
+      - key: Contact details
+        html: |
+          07700 900457<br>
+          sarah.phillips@example.com
+        actions:
+          - href: '#'
+            text: Change
+      - key: Contact details
+        text: 07700 900457
+        actions:
+          - href: '#'
+            text: Change
