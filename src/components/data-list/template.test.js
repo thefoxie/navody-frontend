@@ -28,6 +28,18 @@ describe('Data list', () => {
     const $component = $('.govuk-data-list')
     expect($component.hasClass('app-custom-class')).toBeTruthy()
   })
+  it('renders with attributes', () => {
+    const $ = render('data-list', {
+      attributes: {
+        'data-attribute-1': 'value-1',
+        'data-attribute-2': 'value-2'
+      }
+    })
+
+    const $component = $('.govuk-data-list')
+    expect($component.attr('data-attribute-1')).toEqual('value-1')
+    expect($component.attr('data-attribute-2')).toEqual('value-2')
+  })
   describe('rows', () => {
     describe('keys', () => {
       it('renders keys', async () => {
