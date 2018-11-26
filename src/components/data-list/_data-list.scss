@@ -49,13 +49,6 @@
     }
   }
 
-  .govuk-data-list__item-align-right {
-
-    @include govuk-media-query($from: tablet) {
-      text-align: right;
-    }
-  }
-
   .govuk-data-list__action {
     display: block;
     margin: 0;
