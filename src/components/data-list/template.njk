@@ -13,7 +13,7 @@
             {% for action in row.actions %}
               <li class="govuk-data-list__action-list-item">
                 <a class="govuk-link" href="{{ action.href }}">
-                  {{ action.text }}
+                  {{ action.text }}<span class="govuk-visually-hidden"> {{ row.key }}</span>
                 </a>
               </li>
             {% endfor %}

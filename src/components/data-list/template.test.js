@@ -152,6 +152,25 @@ describe('Data list', () => {
 
         expect($actionLink.text()).toContain('Edit')
       })
+      it('renders accessible name with context from key', async () => {
+        const $ = render('data-list', {
+          rows: [
+            {
+              key: 'Name',
+              actions: [
+                {
+                  text: 'Edit'
+                }
+              ]
+            }
+          ]
+        })
+
+        const $component = $('.govuk-data-list')
+        const $actionLink = $component.find('.govuk-data-list__action-list-item a')
+
+        expect($actionLink.text()).toContain('Edit Name')
+      })
       it('renders classes', async () => {
         const $ = render('data-list', {
           actionsClasses: 'app-custom-class',
