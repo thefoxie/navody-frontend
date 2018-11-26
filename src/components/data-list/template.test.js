@@ -46,7 +46,9 @@ describe('Data list', () => {
         const $ = render('data-list', {
           rows: [
             {
-              key: 'Name'
+              key: {
+                text: 'Name'
+              }
             }
           ]
         })
@@ -58,10 +60,12 @@ describe('Data list', () => {
       })
       it('renders classes', async () => {
         const $ = render('data-list', {
-          keyClasses: 'app-custom-class',
           rows: [
             {
-              key: 'Name'
+              key: {
+                classes: 'app-custom-class',
+                text: 'Name'
+              }
             }
           ]
         })
@@ -76,7 +80,9 @@ describe('Data list', () => {
         const $ = render('data-list', {
           rows: [
             {
-              text: 'Firstname Lastname'
+              value: {
+                text: 'Firstname Lastname'
+              }
             }
           ]
         })
@@ -90,7 +96,9 @@ describe('Data list', () => {
         const $ = render('data-list', {
           rows: [
             {
-              html: '<span>email@email.com</span>'
+              value: {
+                html: '<span>email@email.com</span>'
+              }
             }
           ]
         })
@@ -102,10 +110,12 @@ describe('Data list', () => {
       })
       it('renders classes', async () => {
         const $ = render('data-list', {
-          valueClasses: 'app-custom-class',
           rows: [
             {
-              text: 'Firstname Lastname'
+              value: {
+                classes: 'app-custom-class',
+                text: 'Firstname Lastname'
+              }
             }
           ]
         })
@@ -120,11 +130,13 @@ describe('Data list', () => {
         const $ = render('data-list', {
           rows: [
             {
-              actions: [
-                {
-                  href: 'https://www.gov.uk'
-                }
-              ]
+              actions: {
+                items: [
+                  {
+                    href: 'https://www.gov.uk'
+                  }
+                ]
+              }
             }
           ]
         })
@@ -138,11 +150,13 @@ describe('Data list', () => {
         const $ = render('data-list', {
           rows: [
             {
-              actions: [
-                {
-                  text: 'Edit'
-                }
-              ]
+              actions: {
+                items: [
+                  {
+                    text: 'Edit'
+                  }
+                ]
+              }
             }
           ]
         })
@@ -156,12 +170,16 @@ describe('Data list', () => {
         const $ = render('data-list', {
           rows: [
             {
-              key: 'Name',
-              actions: [
-                {
-                  text: 'Edit'
-                }
-              ]
+              key: {
+                text: 'Name'
+              },
+              actions: {
+                items: [
+                  {
+                    text: 'Edit'
+                  }
+                ]
+              }
             }
           ]
         })
@@ -173,14 +191,16 @@ describe('Data list', () => {
       })
       it('renders classes', async () => {
         const $ = render('data-list', {
-          actionsClasses: 'app-custom-class',
           rows: [
             {
-              actions: [
-                {
-                  text: 'Edit'
-                }
-              ]
+              actions: {
+                classes: 'app-custom-class',
+                items: [
+                  {
+                    text: 'Edit'
+                  }
+                ]
+              }
             }
           ]
         })
