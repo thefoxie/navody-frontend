@@ -87,17 +87,14 @@
   .govuk-data-list__action-list-item {
     display: inline;
     padding-right: govuk-spacing(2);
+    margin-right:  govuk-spacing(2);
     border-right: 1px solid $govuk-border-colour;
   }
 
-  .govuk-data-list__action-list-item:nth-last-of-type(1) {
+  .govuk-data-list__action-list-item:last-child {
     padding-right: 0;
-    padding-left: 0;
-    border-right: 0;
-
-    @include govuk-media-query($from: tablet) {
-      padding-left: govuk-spacing(1);
-    }
+    margin-right: 0;
+    border: 0;
   }
 
   // No borders
