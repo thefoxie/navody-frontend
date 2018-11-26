@@ -1,3 +1,43 @@
+params:
+- name: rows
+  type: array
+  required: true
+  description: Array of row item objects
+  params:
+  - name: key
+    type: string
+    required: true
+    description: If `html` is set, this is not required. Text to use within the breadcrumbs item. If `html` is provided, the `text` argument will be ignored.
+  - name: text
+    type: string
+    required: true
+    description: If `html` is set, this is not required. Text to use within the breadcrumbs item. If `html` is provided, the `text` argument will be ignored.
+  - name: html
+    type: string
+    required: true
+    description: If `text` is set, this is not required. HTML to use within the breadcrumbs item. If `html` is provided, the `text` argument will be ignored.
+  - name: actions
+    type: array
+    required: false
+    description: Link for the breadcrumbs item. If not specified, breadcrumbs item is a normal list item.
+    params:
+    - name: href
+      type: string
+      required: true
+      description: TODO
+    - name: text
+      type: string
+      required: true
+      description: TODO
+- name: classes
+  type: string
+  required: false
+  description: Classes to add to the data-list container.
+- name: attributes
+  type: object
+  required: false
+  description: HTML attributes (for example data attributes) to add to the data-list container.
+
 examples:
  - name: default
    data:
