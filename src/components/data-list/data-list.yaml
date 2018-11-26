@@ -71,39 +71,6 @@ examples:
             text: Edit
           - href: '#'
             text: Change
- - name: actions-wrap-on-small-screens
-   data:
-    classes: govuk-data-list--break-action
-    rows:
-      - key: Name
-        text: Firstname Lastname
-        actions:
-          - href: '#'
-            text: Edit
-          - href: '#'
-            text: Delete
-      - key: Date of birth
-        text: 13/08/1980
-        actions:
-        - href: '#'
-          text: Change
-      - key: Contact information
-        html: |
-          <p class="govuk-body">
-            email@email.com
-          </p>
-          <p class="govuk-body">
-            Address line 1<br>
-            Address line 2<br>
-            Address line 3<br>
-            Address line 4<br>
-            Address line 5
-          </p>
-        actions:
-          - href: '#'
-            text: Edit
-          - href: '#'
-            text: Change
  - name: no-border
    data:
     classes: govuk-data-list--no-border
