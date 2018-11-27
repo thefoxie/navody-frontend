@@ -190,11 +190,192 @@ examples:
             items:
               - href: '#'
                 text: Change
-        - key: 
-            text: Contact details
+        - key:
+            text: Previous application number
           value:
-            text: 07700 900457
+            text: 502135326
           actions:
             items:
               - href: '#'
                 text: Change
+        - key: 
+            text: Licence type
+          value:
+            text: For personal use
+          actions:
+            items:
+              - href: '#'
+                text: Change
+        - key:
+            text: Home address
+          value:
+            html: |
+              <p class="govuk-body">
+                72 Guild Street<br>
+                London<br>
+                SE23 6FH
+              </p>
+          actions:
+            items:
+              - href: '#'
+                text: Change
+        - key:
+            text: Licence period
+          value:
+            html: |
+              <p class="govuk-body">This is a longer paragraph of text provided by the user to provide additional information.</p>
+              <p class="govuk-body">This is a second paragraph of text provided by the user.</p>
+          actions:
+            items:
+              - href: '#'
+                text: Change
+  - name: extreme
+    data:
+      rows:
+        - key:
+            text: Name
+          value:
+            text: Barnaby Marmaduke Aloysius Benjy Cobweb Dartagnan Egbert Felix Gaspar Humbert Ignatius Jayden Kasper Leroy Maximilian Neddy Obiajulu Pepin Quilliam Rosencrantz Sexton Teddy Upwood Vivatma Wayland Xylon Yardley Zachary Usansky
+          actions:
+            items:
+              - href: '#'
+                text: Buy
+              - href: '#'
+                text: Use
+              - href: '#'
+                text: Break
+              - href: '#'
+                text: Fix
+              - href: '#'
+                text: Trash
+              - href: '#'
+                text: Change
+              - href: '#'
+                text: Mail
+              - href: '#'
+                text: Upgrade
+              - href: '#'
+                text: Charge
+              - href: '#'
+                text: Point
+              - href: '#'
+                text: Coom
+              - href: '#'
+                text: Press
+              - href: '#'
+                text: Snap
+              - href: '#'
+                text: Work
+              - href: '#'
+                text: Quick
+              - href: '#'
+                text: Erase
+        - key:
+            text: Pneumonoultramicroscopicsilicovolcanoconiosis
+          value:
+            html: |
+              <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis consequat diam. Duis efficitur justo at congue iaculis. Quisque scelerisque ornare justo nec congue. Duis egestas felis nibh, eu cursus metus rutrum eget. In dictum lectus diam, dapibus ullamcorper risus gravida a. Vestibulum tempor mattis sapien, at auctor tellus dignissim non. Praesent dictum felis nec diam tempor, vel lobortis leo ultricies.</p>
+              <p class="govuk-body">Suspendisse potenti. Aliquam dictum eu ipsum sed facilisis. Maecenas hendrerit est eget ultrices venenatis. Nam ex nisl, venenatis eget molestie quis, hendrerit id tellus. Morbi et posuere ex, vel interdum sapien. Mauris ac mattis turpis, interdum eleifend erat. Morbi eget efficitur lectus. Sed suscipit laoreet ipsum et iaculis. Integer ornare ipsum quis aliquet scelerisque. Proin venenatis dictum suscipit. Nunc tristique, felis quis fermentum rhoncus, tortor augue egestas ipsum, non porttitor nulla odio vitae purus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+          actions:
+            items:
+              - href: '#'
+                text: Write
+              - href: '#'
+                text: Cut
+              - href: '#'
+                text: Paste
+              - href: '#'
+                text: Save
+              - href: '#'
+                text: Load
+              - href: '#'
+                text: Check
+              - href: '#'
+                text: Quick
+              - href: '#'
+                text: Rewrite
+              - href: '#'
+                text: Plug
+              - href: '#'
+                text: Play
+              - href: '#'
+                text: Burn
+              - href: '#'
+                text: Rip
+              - href: '#'
+                text: Drag and drop
+              - href: '#'
+                text: Zip
+              - href: '#'
+                text: Unzip
+              - href: '#'
+                text: Lock
+              - href: '#'
+                text: Fill
+              - href: '#'
+                text: Curl
+              - href: '#'
+                text: Find
+              - href: '#'
+                text: View
+              - href: '#'
+        - key:
+            text: Its vanished trees, the trees that had made way for Gatsby’s house, Pneumonoultramicroscopicsilicovolcanoconiosis had once pandered in whispers to the last and greatest of all human dreams; for a transitory enchanted moment man must have held his breath in the presence of this continent, compelled into an aesthetic contemplation he neither understood nor desired, face to face for the last time in history with something commensurate to his capacity for wonder.
+          value:
+            text: The Great Gatsby
+          actions:
+            items:
+              - href: '#'
+                text: Code
+              - href: '#'
+                text: Jam
+              - href: '#'
+                text: Unlock
+              - href: '#'
+                text: Surf
+              - href: '#'
+                text: Scroll
+              - href: '#'
+                text: Pose
+              - href: '#'
+                text: Click
+              - href: '#'
+                text: Cross
+              - href: '#'
+                text: Crack
+              - href: '#'
+                text: Twitch
+              - href: '#'
+                text: Update
+              - href: '#'
+                text: Name
+              - href: '#'
+                text: Read
+              - href: '#'
+                text: Tune
+              - href: '#'
+                text: Print
+              - href: '#'
+                text: Scan
+              - href: '#'
+                text: Send
+              - href: '#'
+                text: Fax
+              - href: '#'
+                text: Rename
+              - href: '#'
+                text: Touch
+              - href: '#'
+                text: Bring
+              - href: '#'
+                text: Pay
+              - href: '#'
+                text: Watch
+              - href: '#'
+                text: Turn
+              - href: '#'
+                text: Leave
+              - href: '#'
+                text: Stop
+              - href: '#'
+                text: Format
