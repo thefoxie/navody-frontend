@@ -64,6 +64,7 @@
   .govuk-data-list__key {
     margin-bottom: govuk-spacing(1);
     @include govuk-typography-weight-bold;
+    word-break: break-word;
   }
 
   .govuk-data-list__value > p {
