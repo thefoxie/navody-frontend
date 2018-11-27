@@ -42,7 +42,7 @@ describe('Data list', () => {
   })
   describe('rows', () => {
     describe('keys', () => {
-      it('renders keys', async () => {
+      it('renders text', async () => {
         const $ = render('data-list', {
           rows: [
             {
@@ -57,6 +57,22 @@ describe('Data list', () => {
         const $key = $component.find('dt.govuk-data-list__key')
 
         expect($key.html()).toContain('Name')
+      })
+      it('renders html', async () => {
+        const $ = render('data-list', {
+          rows: [
+            {
+              key: {
+                html: '<b>Name</b>'
+              }
+            }
+          ]
+        })
+
+        const $component = $('.govuk-data-list')
+        const $key = $component.find('dt.govuk-data-list__key')
+
+        expect($key.html()).toContain('<b>Name</b>')
       })
       it('renders classes', async () => {
         const $ = render('data-list', {
@@ -165,6 +181,26 @@ describe('Data list', () => {
         const $actionLink = $component.find('.govuk-data-list__actions-list-item a')
 
         expect($actionLink.text()).toContain('Edit')
+      })
+      it('renders html', async () => {
+        const $ = render('data-list', {
+          rows: [
+            {
+              actions: {
+                items: [
+                  {
+                    html: '<b>Edit</b>'
+                  }
+                ]
+              }
+            }
+          ]
+        })
+
+        const $component = $('.govuk-data-list')
+        const $actionLink = $component.find('.govuk-data-list__actions-list-item a')
+
+        expect($actionLink.html()).toContain('<b>Edit</b>')
       })
       it('renders accessible name with context from key', async () => {
         const $ = render('data-list', {
