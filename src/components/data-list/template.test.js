@@ -54,9 +54,9 @@ describe('Data list', () => {
         })
 
         const $component = $('.govuk-data-list')
-        const $definitionTerm = $component.find('dt.govuk-data-list__item')
+        const $key = $component.find('dt.govuk-data-list__key')
 
-        expect($definitionTerm.html()).toContain('Name')
+        expect($key.html()).toContain('Name')
       })
       it('renders classes', async () => {
         const $ = render('data-list', {
@@ -71,8 +71,8 @@ describe('Data list', () => {
         })
 
         const $component = $('.govuk-data-list')
-        const $definitionTerm = $component.find('dt.govuk-data-list__item')
-        expect($definitionTerm.hasClass('app-custom-class')).toBeTruthy()
+        const $key = $component.find('dt.govuk-data-list__key')
+        expect($key.hasClass('app-custom-class')).toBeTruthy()
       })
     })
     describe('values', () => {
@@ -88,9 +88,9 @@ describe('Data list', () => {
         })
 
         const $component = $('.govuk-data-list')
-        const $definitionTerm = $component.find('dd.govuk-data-list__item')
+        const $value = $component.find('dd.govuk-data-list__value')
 
-        expect($definitionTerm.html()).toContain('Firstname Lastname')
+        expect($value.html()).toContain('Firstname Lastname')
       })
       it('renders html', async () => {
         const $ = render('data-list', {
@@ -104,9 +104,9 @@ describe('Data list', () => {
         })
 
         const $component = $('.govuk-data-list')
-        const $definitionTerm = $component.find('dd.govuk-data-list__item')
+        const $value = $component.find('dd.govuk-data-list__value')
 
-        expect($definitionTerm.html()).toContain('<span>email@email.com</span>')
+        expect($value.html()).toContain('<span>email@email.com</span>')
       })
       it('renders classes', async () => {
         const $ = render('data-list', {
@@ -121,8 +121,8 @@ describe('Data list', () => {
         })
 
         const $component = $('.govuk-data-list')
-        const $definitionTerm = $component.find('dd.govuk-data-list__item')
-        expect($definitionTerm.hasClass('app-custom-class')).toBeTruthy()
+        const $value = $component.find('dd.govuk-data-list__value')
+        expect($value.hasClass('app-custom-class')).toBeTruthy()
       })
     })
     describe('actions', () => {
@@ -142,7 +142,7 @@ describe('Data list', () => {
         })
 
         const $component = $('.govuk-data-list')
-        const $actionLink = $component.find('.govuk-data-list__action-list-item a')
+        const $actionLink = $component.find('.govuk-data-list__actions-list-item a')
 
         expect($actionLink.attr('href')).toBe('https://www.gov.uk')
       })
@@ -162,7 +162,7 @@ describe('Data list', () => {
         })
 
         const $component = $('.govuk-data-list')
-        const $actionLink = $component.find('.govuk-data-list__action-list-item a')
+        const $actionLink = $component.find('.govuk-data-list__actions-list-item a')
 
         expect($actionLink.text()).toContain('Edit')
       })
@@ -185,7 +185,7 @@ describe('Data list', () => {
         })
 
         const $component = $('.govuk-data-list')
-        const $actionLink = $component.find('.govuk-data-list__action-list-item a')
+        const $actionLink = $component.find('.govuk-data-list__actions-list-item a')
 
         expect($actionLink.text()).toContain('Edit Name')
       })
@@ -206,7 +206,7 @@ describe('Data list', () => {
         })
 
         const $component = $('.govuk-data-list')
-        const $actionList = $component.find('.govuk-data-list__action')
+        const $actionList = $component.find('.govuk-data-list__actions')
 
         expect($actionList.hasClass('app-custom-class')).toBeTruthy()
       })
