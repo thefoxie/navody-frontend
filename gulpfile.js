@@ -22,6 +22,7 @@ const external = {
   scripts: [
     'lib/replace-diacritics.js',
     'lib/slovak-municipalities.js',
+    'lib/testData.js',
     'node_modules/accessible-autocomplete/dist/accessible-autocomplete.min.js'
   ],
   styles: [

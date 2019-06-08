@@ -11,8 +11,9 @@ import Tabs from './components/tabs/tabs'
 import SdnHeader from './components/_custom/header/header'
 import SdnTimeline from './components/_custom/timeline/timeline'
 import SdnAppearLink from './utilities/appear-link/appear-link'
+import SdnAutocomplete from './components/_custom/autocomplete/autocomplete'
 
-function initAll (options) {
+function initAll(options) {
   // Set the options to an empty object by default if no options are passed.
   options = typeof options !== 'undefined' ? options : {}
 
@@ -75,6 +76,22 @@ function initAll (options) {
   })
 }
 
+var Autocomplete = new SdnAutocomplete();
+
+var autocompleteOnChangeHandlers = {};
+
+function initAutocomplete(settings) {
+  autocompleteOnChangeHandlers[settings.element] = function (element) { };
+  settings.onChange = autocompleteOnChangeHandlers[settings.element];
+  Autocomplete.init(settings);
+}
+
+function setAutocompleteChange(element, handler) {
+  if (autocompleteOnChangeHandlers[element]) {
+    autocompleteOnChangeHandlers[element] = handler;
+  }
+}
+
 export {
   initAll,
   Accordion,
@@ -87,5 +104,6 @@ export {
   Radios,
   Tabs,
   SdnHeader,
-  SdnTimeline
+  SdnTimeline,
+  Autocomplete
 }

@@ -1,0 +1,31 @@
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label--m" for="{{ params.element }}">
+    {{ params.label }}
+    <span id="passport-number-hint" class="govuk-hint">
+      {{ params.hint }}
+    </span>
+
+    <div id="{{ params.element }}-autocomplete-container"></div>
+    <input type="hidden" name="{{ params.name }}">
+  </div>
+
+  <script>
+    /*
+  params.element is string
+  ex."my-fancy-autocomplete"
+  that makes label for="my-fancy-autocomplete"
+  div container that is being init by accessibleAutocomplete id="my-fancy-autocomplete-autocomplete-container"
+  */
+    window.onload = function () {
+      window
+        .navodyDigitalFrontend
+        .Autocomplete.init({
+          element: "{{ params.element }}", // id to match container and label
+          name:"{{ params.name }}",
+          data: {{ params.data | safe }}, // pole objektov
+          searchField: "{{ params.search | safe }}", // porovnávaný parameter
+          returnField: "{{ params.return | safe}}", // návratový parameter
+          noResultText: "{{ params.noResult }}"
+        });
+    };
+  </script>
